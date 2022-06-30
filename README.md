@@ -13,3 +13,9 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 Note: **[Bluetooth Explorer](https://www.ellisys.com/products/bex400)** by Ellisys is a separate unaffiliated product.
+
+**MarkOliver:  Updates not in Microsoft Repo **
+
+- Minor changes to allow "\x" hex string input in the UTF8 Write Value functionality.
+- Increased size of panels in Bluetooth discovery search page, to show missing values.
+       

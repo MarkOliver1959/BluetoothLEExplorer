@@ -228,8 +228,8 @@
 
             <RelativePanel Grid.Row="2" VerticalAlignment="Center" Visibility="{x:Bind ViewModel.CharacteristicCanWrite, Converter={StaticResource VisibleWhenTrueConverter}}">
                 <TextBlock x:Name="WriteValueText" Text="Write Value: " Margin="0,5,5,5" VerticalAlignment="Center" Width="100" />
-                <TextBox x:Name="WriteValue" Text="{x:Bind ViewModel.ValueToWrite, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="5" 
-                         RelativePanel.RightOf="WriteValueText" TextChanging="WriteValue_TextChanging" KeyUp="DetectEnter_Keydown"/>
+                <TextBox x:Name="WriteValue" Text="{x:Bind ViewModel.ValueToWrite, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                         RelativePanel.RightOf="WriteValueText" TextChanging="WriteValue_TextChanging" KeyUp="DetectEnter_Keydown" Margin="5" Width="330"/>
                 <Button x:Name="WriteButton" Content="Write" Click="{x:Bind ViewModel.WriteValue}" Margin="5" RelativePanel.RightOf="WriteValue"/>
                 <Button x:Name="WriteTransactionButton" Content="Write Transaction" Click="{x:Bind ViewModel.WriteTransaction}" Visibility="{x:Bind ViewModel.IsTransactionInProgress, Converter={StaticResource VisibleWhenTrueConverter}, Mode=OneWay}" Margin="5" RelativePanel.RightOf="WriteButton" />
                 <!-- The radio buttons need to be in different groups because they are all bound to the same property, so it takes care of which ones stays on vs off. If there is no group then the stackpanel container -->

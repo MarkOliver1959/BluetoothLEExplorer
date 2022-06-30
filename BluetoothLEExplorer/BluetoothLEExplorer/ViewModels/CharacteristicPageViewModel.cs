@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using BluetoothLEExplorer.Models;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
@@ -642,10 +643,12 @@ namespace BluetoothLEExplorer.ViewModels
                     }
 
                 }
-                else if (WriteType == WriteTypes.UTF8)
+                else if (WriteType == WriteTypes.UTF8)  // MLO: Bookmark
                 {
-                    writeBuffer = CryptographicBuffer.ConvertStringToBinary(ValueToWrite,
-                    BinaryStringEncoding.Utf8);
+                    String data = Regex.Unescape(ValueToWrite);
+                    byte[] hexdata = Encoding.GetEncoding("iso-8859-1").GetBytes(data);
+                    writeBuffer = CryptographicBuffer.CreateFromByteArray(hexdata);
+                    //writeBuffer = CryptographicBuffer.ConvertStringToBinary(ValueToWrite,BinaryStringEncoding.Utf8);
                 }
 
                 try

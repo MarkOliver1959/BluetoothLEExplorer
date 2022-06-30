@@ -183,7 +183,7 @@
 
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="models:ObservableBluetoothLEDevice" >
-                        <Grid Height="200" Width="150" Padding="5" Holding="Grid_Holding" Background="{ThemeResource CustomColor}">
+                        <Grid Height="246" Width="220" Padding="4" Holding="Grid_Holding" Background="{ThemeResource CustomColor}">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto" />
                                 <RowDefinition Height="*" />
